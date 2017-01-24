@@ -1,0 +1,99 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>BiStorm, LLC</title>
+        <meta name="description" content="Peer2Peer, Biz2Biz, Oh what a relief IT is.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <script src="./js/modernizr-bundle.js" type="text/javascript"></script>
+		<script src="//content.jwplatform.com/libraries/LwXnbJyH.js"></script>
+        <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
+    </head>
+
+    <body>
+    	<!-- 
+    		We're performing some cutting and pasting from our old Initializr HTML5 Boilerplate
+    		Into a 'Hello World' app that we created together earlier.
+    		
+    		So, now that we have begun merging files together, we can begin to include some of these JS libraries
+    		In a more modular way.
+    		
+    		Note : There is really nothing currently on the homepage that requires reactJS.
+    			However, this will make single-page expressions to be developed more quickly.
+    			So, we are preparing for additional features now, to reduce technical debt.
+    	-->
+    	
+    	<script src="./js/bundle.js" type="text/javascript"></script>
+    	
+    	
+		 <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+           
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">		
+			
+				<div id="stream" width="100%" height="90%">				
+					<!-- for live streaming source -->
+					<video width="100%" height="100%" controls>
+						 src="http://lostinsound.bistorm.us:84/live/desktop/desktop.m3u8" type="application/x-mpegurl">
+					</video> 
+				</div>
+            </div>
+        </div> 
+        <div class="footer-container">
+            <footer class="wrapper">
+                <div class="info">
+					
+				</div>
+            </footer>
+        </div>
+
+		<!-- The script below is for when we are live streaming -->
+		<script>	
+			var playerInstance = jwplayer("stream");
+			playerInstance.setup({
+				playlist: [{
+				image: "http://blog.bistorm.org/wp-content/uploads/2016/10/bistorm.svg",
+					sources: [
+						{
+							file: "http://lostinsound.bistorm.us:84/live/desktop/desktop.m3u8",
+						},
+						{ 
+							file: "rtmp://lostinsound.bistorm.us:85/live/flv:desktop",
+						}
+					]
+				}],
+				width: "100%",
+				aspectratio: "16:9",
+				primary: "flash",
+				hlslabels: {
+					"2500":"High",
+					"1000":"Medium"
+				}
+			});
+		</script>
+		
+		<script src="./js/vendors.bundle.js" type="text/javascript"></script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-79492414-1','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

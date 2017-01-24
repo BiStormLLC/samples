@@ -1,0 +1,14 @@
+# bistorm.org/
+
+# TEAM
+
+   Jonathan McQuade -- Founder -- @EveEqualsMc2
+
+# THANKS
+
+    Humans
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
